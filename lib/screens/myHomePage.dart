@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider2/provider/bankAccount.dart';
 import 'package:provider2/screens/testSFW.dart';
+import 'package:provider2/screens/testSLW.dart';
 
 class MyHomePage extends StatelessWidget {
 
@@ -29,20 +30,12 @@ class MyHomePage extends StatelessWidget {
             RaisedButton(
               child: Text("Test with StatelessWifet"),
               onPressed: () {
-                // Navigator.push(context, 
-                // MaterialPageRoute(builder: (context) => TestSLW()));
+                Navigator.push(context, 
+                MaterialPageRoute(builder: (context) => TestSLW()));
               }
               )  
               //이부분 다시 정리
-          ].map(
-            (child){
-              return Container(
-                margin: const EdgeInsets.symmetric(horizontal: 5),
-                width: 40,
-                child: child
-              );
-            }
-          ).toList(),
+          ],
         ),
       ),
     );

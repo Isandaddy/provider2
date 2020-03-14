@@ -2,18 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider2/provider/bankAccount.dart';
 
-class TestSFW extends StatefulWidget {
-  @override
-  _TestSFWState createState() => _TestSFWState();
-}
-
-class _TestSFWState extends State<TestSFW> {
+class TestSLW extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     BankAccount bankAccount = Provider.of<BankAccount>(context);
     String name = Provider.of<String>(context);
+    print('build restart');
     return Scaffold(
-      appBar: AppBar(title: Text("SFW with Prodiver")),
+      appBar: AppBar(title: Text("SFW with Provider")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
